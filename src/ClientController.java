@@ -76,6 +76,7 @@ public class ClientController implements Initializable{
     @FXML
     public void connect() {
         try {
+            System.setProperty("javax.net.ssl.trustStore", "c:\\users\\magnusfinvik\\keystore");
             SSLSocketFactory ssf = (SSLSocketFactory) SSLSocketFactory.getDefault();
             socket = (SSLSocket) ssf.createSocket("localhost", 8000);
             new Thread(() -> {
