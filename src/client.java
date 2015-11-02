@@ -6,9 +6,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 
-/**
- * Created by magnusfinvik on 22.04.2015.
- */
+
 public class client extends Application {
     Stage primaryStage;
 

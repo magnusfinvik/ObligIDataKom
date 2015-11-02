@@ -5,7 +5,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
-import javax.net.ssl.SSLServerSocketFactory;
+import javax.net.ssl.*;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -14,9 +14,7 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Date;
 
-/**
- * Created by magnusfinvik on 29.04.2015.
- */
+
 public class Server extends Application {
     ArrayList<ObjectOutputStream> list = new ArrayList<>();
 
@@ -43,6 +41,7 @@ public class Server extends Application {
 
                     System.setProperty("javax.net.ssl.trustStore", "c:\\Users\\magnusfinvik\\keystore");
                     System.setProperty("javax.net.ssl.keyStorePassword", "password");
+
                     SSLServerSocketFactory serverSocketFactory = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
 
                     ServerSocket serverSocket = serverSocketFactory.createServerSocket(8000);

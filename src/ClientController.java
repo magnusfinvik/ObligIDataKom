@@ -14,9 +14,7 @@ import java.net.URL;
 import java.net.UnknownHostException;
 import java.util.ResourceBundle;
 
-/**
- * Created by magnusfinvik on 29.04.2015.
- */
+
 public class ClientController implements Initializable{
 
     @FXML

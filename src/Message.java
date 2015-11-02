@@ -1,8 +1,6 @@
 import java.io.Serializable;
 
-/**
- * Created by magnusfinvik on 07.05.2015.
- */
+
 public class Message implements Serializable{
     private String name;
     private String message;
