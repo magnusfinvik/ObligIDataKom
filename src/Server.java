@@ -39,7 +39,7 @@ public class Server extends Application {
             new Thread(() -> {
                 try {
 
-                    System.setProperty("javax.net.ssl.trustStore", "c:\\Users\\magnusfinvik\\keystore");
+                    System.setProperty("javax.net.ssl.keyStore", "c:\\Users\\magnusfinvik\\keystore");
                     System.setProperty("javax.net.ssl.keyStorePassword", "password");
 
                     SSLServerSocketFactory serverSocketFactory = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
