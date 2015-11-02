@@ -54,8 +54,11 @@ public class ClientController implements Initializable{
 
     private void streamCreatorAndMore() {
         try {
+            System.out.println("0");
             toServer = new ObjectOutputStream(socket.getOutputStream());
+            System.out.println("1");
             fromServer = new ObjectInputStream(socket.getInputStream());
+            System.out.println("2");
 
             while (true) {
                 Message outPrint = (Message) fromServer.readObject();
@@ -79,6 +82,7 @@ public class ClientController implements Initializable{
             System.setProperty("javax.net.ssl.trustStore", "c:\\users\\magnusfinvik\\keystore");
             SSLSocketFactory ssf = (SSLSocketFactory) SSLSocketFactory.getDefault();
             socket = (SSLSocket) ssf.createSocket("localhost", 8000);
+           // socket.startHandshake();
             new Thread(() -> {
                     streamCreatorAndMore();
             }).start();

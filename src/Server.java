@@ -55,6 +55,7 @@ public class Server extends Application {
                         Socket socket = serverSocket.accept();
                         new Thread(() -> {
                            new ClientHandler(socket);
+
                         });
 
                         clientNumber++;
